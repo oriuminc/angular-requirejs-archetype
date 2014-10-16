@@ -1,11 +1,11 @@
 define([
 	'angular',
-	'angular-ui-router',
-	'text!./hello.html'
-], function (angular, uiRouter, helloTmpl) {
+	'text!./hello.html',
+	'app'
+], function (angular, helloTmpl, app) {
 	'use strict';
 
-	angular.module('app', [ 'ui.router' ])
+	app
         .config([ '$urlRouterProvider', function ($urlRouterProvider) {
             $urlRouterProvider.otherwise('/');
         }])
