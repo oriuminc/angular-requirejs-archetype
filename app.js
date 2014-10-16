@@ -1,7 +1,7 @@
 define([
-	'angular',
-	'angular-ui-router'	
+    'angular',
+    'angular-ui-router'
 ], function (angular) {
 
-	return angular.module('app', [ 'ui.router' ])
+    return angular.module('app', [ 'ui.router' ])
 });
