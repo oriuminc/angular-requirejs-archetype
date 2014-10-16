@@ -1,7 +1,8 @@
 define([
 	'angular',
-	'angular-ui-router'
-], function (angular) {
+	'angular-ui-router',
+	'text!./hello.html'
+], function (angular, uiRouter, helloTmpl) {
 	'use strict';
 
 	angular.module('app', [ 'ui.router' ])
@@ -14,7 +15,7 @@ define([
 		.config([ '$stateProvider', function ($stateProvider) {
 			$stateProvider.state('main', {
 				url: '/',
-				template: '<h1>Hello Again, {{ yourNameHere }}.</h1>',
+				template: helloTmpl,
 				controller: 'helloController'
 			});
 		}]);
