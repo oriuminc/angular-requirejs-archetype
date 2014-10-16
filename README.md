@@ -1,0 +1,2 @@
+angular-requirejs-archetype
+===========================
