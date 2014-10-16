@@ -1,24 +1,14 @@
 define([
 	'angular',
-	'text!./hello.html',
-	'app'
-], function (angular, helloTmpl, app) {
+	'app',
+	'login',
+	'portal'
+], function (angular, app) {
 	'use strict';
 
-	app
-        .config([ '$urlRouterProvider', function ($urlRouterProvider) {
-            $urlRouterProvider.otherwise('/');
-        }])
-		.controller('helloController', [ '$scope', function ($scope) {
-			$scope.yourNameHere = 'Flat Eric';
-		}])
-		.config([ '$stateProvider', function ($stateProvider) {
-			$stateProvider.state('main', {
-				url: '/',
-				template: helloTmpl,
-				controller: 'helloController'
-			});
-		}]);
+	app.config([ '$urlRouterProvider', function ($urlRouterProvider) {
+        $urlRouterProvider.otherwise('/login');
+    }]);
 
 	angular.bootstrap(document, [ 'app' ]);
 });
