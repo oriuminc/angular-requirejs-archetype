@@ -1,8 +1,8 @@
 define([
     'angular',
     'app',
-    'login',
-    'portal'
+    'login/login',
+    'portal/portal'
 ], function (angular, app) {
     'use strict';
 
